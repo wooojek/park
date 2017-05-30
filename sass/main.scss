@@ -1,11 +1,19 @@
 $logoColor: #9bc651;
 $logoBackgroundColor: rgba(255, 255, 255, 0.7);
+$buildColor: #43463e;
+$clientsColor: #37461d;
+$signUpColor: #091e28;
+$picturesColor: #73933c;
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-size: 35px;
 }
 
 body {
@@ -53,14 +61,77 @@ body {
 
             .c-header__generalView__text__paragraph {
                 font-size: 14px;
-                font-weight: 400;
+                font-weight: 300;
             }
         }
 
         .c-header__generalView__mobilePhone {
             width: 60%;
-            padding-top: 200px;
+            padding-top: 150px;
             float: right;
+        }
+    }
+}
+
+.o-main {
+    margin: 0 60px;
+    margin-bottom: 70px;
+    font-weight: 300;
+
+    .o-main__productOverview {
+
+        .c-main__productOverview__title {
+            margin-top: 100px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .o-main__productOverview__description {
+            
+            .c-main__productOverview__description__paragraph {
+                font-weight: 300;
+                text-align: left;
+                padding-bottom: 30px; 
+            }
+        }
+    }
+
+    .o-main__functions {
+
+        .o-main__functions__boxes {
+            color: white;
+            height: 280px;
+            padding: 45px 40px;
+
+            .c-main__functions__boxes__title {
+                font-weight: 300;
+                margin-bottom: 15px;
+            }
+
+            .c-main__functions__boxes__paragraph {
+                margin-bottom: 15px;
+            }
+
+            .c-main__functions__boxes__link {
+                color: white;
+                font-weight: 700;
+            }
+        }
+
+        .c-main_functions__boxes--build {
+            background-color: $buildColor;
+        }
+        
+        .c-main_functions__boxes--clients {
+            background-color: $clientsColor;
+        }
+        
+        .c-main_functions__boxes--signUp {
+            background-color: $signUpColor;
+        }
+        
+        .c-main_functions__boxes--pictures {
+            background-color: $picturesColor;
         }
     }
 }

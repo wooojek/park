@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3 {
+  font-size: 35px;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -53,11 +57,65 @@ body {
 
 .o-header .o-header__generalView .o-header__generalView__text .c-header__generalView__text__paragraph {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .o-header .o-header__generalView .c-header__generalView__mobilePhone {
   width: 60%;
-  padding-top: 200px;
+  padding-top: 150px;
   float: right;
+}
+
+.o-main {
+  margin: 0 60px;
+  margin-bottom: 70px;
+  font-weight: 300;
+}
+
+.o-main .o-main__productOverview .c-main__productOverview__title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.o-main .o-main__productOverview .o-main__productOverview__description .c-main__productOverview__description__paragraph {
+  font-weight: 300;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.o-main .o-main__functions .o-main__functions__boxes {
+  color: white;
+  height: 280px;
+  padding: 45px 40px;
+}
+
+.o-main .o-main__functions .o-main__functions__boxes .c-main__functions__boxes__title {
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.o-main .o-main__functions .o-main__functions__boxes .c-main__functions__boxes__paragraph {
+  margin-bottom: 15px;
+}
+
+.o-main .o-main__functions .o-main__functions__boxes .c-main__functions__boxes__link {
+  color: white;
+  font-weight: 700;
+}
+
+.o-main .o-main__functions .c-main_functions__boxes--build {
+  background-color: #43463e;
+}
+
+.o-main .o-main__functions .c-main_functions__boxes--clients {
+  background-color: #37461d;
+}
+
+.o-main .o-main__functions .c-main_functions__boxes--signUp {
+  background-color: #091e28;
+}
+
+.o-main .o-main__functions .c-main_functions__boxes--pictures {
+  background-color: #73933c;
 }
