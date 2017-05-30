@@ -37,19 +37,30 @@ body {
     }
 
     .o-header__generalView {
-        width: 360px;
-        margin-left: 60px;
-        vertical-align: middle;
+        margin: 0 60px;
+        color: white;
 
-        .c-header__generalView__title {
-            font-size: 35px;
-            font-weight: bold;
-            color: white;
+        .o-header__generalView__text {
+            width: 40%;
+            float: left;
+            margin-top: 80px;
+
+            .c-header__generalView__text__title {
+                font-size: 35px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .c-header__generalView__text__paragraph {
+                font-size: 14px;
+                font-weight: 400;
+            }
         }
 
-        .c-header__generalView__paragraph {
-            font-size: 14px;
-            font-weight: 400;
+        .c-header__generalView__mobilePhone {
+            width: 60%;
+            padding-top: 200px;
+            float: right;
         }
     }
 }

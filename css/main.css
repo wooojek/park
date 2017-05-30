@@ -35,18 +35,29 @@ body {
 }
 
 .o-header .o-header__generalView {
-  width: 360px;
-  margin-left: 60px;
-  vertical-align: middle;
-}
-
-.o-header .o-header__generalView .c-header__generalView__title {
-  font-size: 35px;
-  font-weight: bold;
+  margin: 0 60px;
   color: white;
 }
 
-.o-header .o-header__generalView .c-header__generalView__paragraph {
+.o-header .o-header__generalView .o-header__generalView__text {
+  width: 40%;
+  float: left;
+  margin-top: 80px;
+}
+
+.o-header .o-header__generalView .o-header__generalView__text .c-header__generalView__text__title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.o-header .o-header__generalView .o-header__generalView__text .c-header__generalView__text__paragraph {
   font-size: 14px;
   font-weight: 400;
+}
+
+.o-header .o-header__generalView .c-header__generalView__mobilePhone {
+  width: 60%;
+  padding-top: 200px;
+  float: right;
 }
