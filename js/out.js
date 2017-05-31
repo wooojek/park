@@ -73,7 +73,12 @@
 "use strict";
 
 
-console.log("hello");
+document.addEventListener("DOMContentLoaded", function () {
+    var searchButton = document.querySelector(".c-header__title__buttons__searchButton");
+    var burgerButton = document.querySelector(".c-header__title__buttons__burgerButton");
+
+    console.log(searchButton, burgerButton);
+});
 
 /***/ })
 /******/ ]);
