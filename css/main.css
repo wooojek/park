@@ -58,7 +58,7 @@ body {
   margin-right: 20px;
 }
 
-.o-header .o-header__title .o-header__title__buttons .c-header__title__buttons_burgerButton {
+.o-header .o-header__title .o-header__title__buttons .c-header__title__buttons__burgerButton {
   display: inline-block;
   width: 40px;
   height: 22px;
