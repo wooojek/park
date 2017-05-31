@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchButtonDropdown = document.querySelector(".c-header__title__buttons__searchButton__dropdown");
     const burgerButtonDropdown = document.querySelector(".c-header__title__buttons__burgerButton__dropdown");
 
-    console.log(searchButtonDropdown, burgerButtonDropdown);
-
     searchButton.addEventListener("click", function () {
 
         searchButtonDropdown.style.display === "block" ? searchButtonDropdown.style.display = "none" : searchButtonDropdown.style.display = "block";

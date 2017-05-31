@@ -79,8 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var searchButtonDropdown = document.querySelector(".c-header__title__buttons__searchButton__dropdown");
     var burgerButtonDropdown = document.querySelector(".c-header__title__buttons__burgerButton__dropdown");
 
-    console.log(searchButtonDropdown, burgerButtonDropdown);
-
     searchButton.addEventListener("click", function () {
 
         searchButtonDropdown.style.display === "block" ? searchButtonDropdown.style.display = "none" : searchButtonDropdown.style.display = "block";
