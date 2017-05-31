@@ -76,8 +76,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     var searchButton = document.querySelector(".c-header__title__buttons__searchButton");
     var burgerButton = document.querySelector(".c-header__title__buttons__burgerButton");
+    var searchButtonDropdown = document.querySelector(".c-header__title__buttons__searchButton__dropdown");
+    var burgerButtonDropdown = document.querySelector(".c-header__title__buttons__burgerButton__dropdown");
 
-    console.log(searchButton, burgerButton);
+    console.log(searchButtonDropdown, burgerButtonDropdown);
+
+    searchButton.addEventListener("click", function () {
+
+        searchButtonDropdown.style.display === "block" ? searchButtonDropdown.style.display = "none" : searchButtonDropdown.style.display = "block";
+        burgerButtonDropdown.style.display = "none";
+    });
+
+    burgerButton.addEventListener("click", function () {
+
+        burgerButtonDropdown.style.display === "block" ? burgerButtonDropdown.style.display = "none" : burgerButtonDropdown.style.display = "block";
+        searchButtonDropdown.style.display = "none";
+    });
 });
 
 /***/ })
