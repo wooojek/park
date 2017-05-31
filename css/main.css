@@ -25,7 +25,10 @@ body {
   height: 130px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .o-header .o-header__title .c-header__title__text {
@@ -34,8 +37,32 @@ body {
   font-weight: bold;
 }
 
-.o-header .o-header__buttons {
+.o-header .o-header__title .o-header__title__buttons {
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .o-header .o-header__title .o-header__title__buttons {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    position: absolute;
+    right: 80px;
+  }
+}
+
+.o-header .o-header__title .o-header__title__buttons .c-header__title__buttons__searchButton {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  margin-right: 20px;
+}
+
+.o-header .o-header__title .o-header__title__buttons .c-header__title__buttons_burgerButton {
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin-left: 20px;
 }
 
 .o-header .o-header__generalView {
@@ -43,10 +70,35 @@ body {
   color: white;
 }
 
+@media only screen and (min-width: 768px) {
+  .o-header .o-header__generalView {
+    margin: 0 90px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-header .o-header__generalView {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 .o-header .o-header__generalView .o-header__generalView__text {
   width: 40%;
   float: left;
-  margin-top: 80px;
+  margin-top: 140px;
+}
+
+@media only screen and (max-width: 499px) {
+  .o-header .o-header__generalView .o-header__generalView__text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .o-header .o-header__generalView .o-header__generalView__text {
+    width: 48%;
+  }
 }
 
 .o-header .o-header__generalView .o-header__generalView__text .c-header__generalView__text__title {
@@ -66,10 +118,50 @@ body {
   float: right;
 }
 
+@media only screen and (max-width: 499px) {
+  .o-header .o-header__generalView .c-header__generalView__mobilePhone {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .o-header .o-header__generalView .c-header__generalView__mobilePhone {
+    width: 52%;
+    max-width: 390px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-header .o-header__generalView .c-header__generalView__mobilePhone {
+    width: 52%;
+    max-width: 480px;
+  }
+}
+
 .o-main {
   margin: 0 60px;
   margin-bottom: 70px;
   font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+  .o-main {
+    margin: 0 90px;
+    margin-bottom: 110px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-main {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 110px;
+  }
+}
+
+.o-main .o-main__productOverview {
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .o-main .o-main__productOverview .c-main__productOverview__title {
@@ -78,16 +170,40 @@ body {
   font-weight: 300;
 }
 
+.o-main .o-main__productOverview .o-main__productOverview__description {
+  width: 100%;
+}
+
 .o-main .o-main__productOverview .o-main__productOverview__description .c-main__productOverview__description__paragraph {
   font-weight: 300;
   text-align: left;
   padding-bottom: 30px;
 }
 
+@media only screen and (min-width: 1200px) {
+  .o-main .o-main__productOverview .o-main__productOverview__description .c-main__productOverview__description__paragraph {
+    width: 45%;
+    padding: 15px 0;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-main .o-main__productOverview .o-main__productOverview__description .c-main__productOverview__description__paragraph:nth-child(2n) {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-main .o-main__functions {
+    height: 560px;
+  }
+}
+
 .o-main .o-main__functions .o-main__functions__boxes {
   color: white;
-  height: 280px;
   padding: 45px 40px;
+  position: relative;
 }
 
 .o-main .o-main__functions .o-main__functions__boxes .c-main__functions__boxes__title {
@@ -96,26 +212,60 @@ body {
 }
 
 .o-main .o-main__functions .o-main__functions__boxes .c-main__functions__boxes__paragraph {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .o-main .o-main__functions .o-main__functions__boxes .c-main__functions__boxes__link {
   color: white;
   font-weight: 700;
+  position: absolute;
+  bottom: 45px;
 }
 
 .o-main .o-main__functions .c-main_functions__boxes--build {
   background-color: #43463e;
 }
 
+@media only screen and (min-width: 1200px) {
+  .o-main .o-main__functions .c-main_functions__boxes--build {
+    float: left;
+    width: 65%;
+    height: 280px;
+  }
+}
+
 .o-main .o-main__functions .c-main_functions__boxes--clients {
   background-color: #37461d;
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-main .o-main__functions .c-main_functions__boxes--clients {
+    float: left;
+    width: 35%;
+    height: 280px;
+  }
 }
 
 .o-main .o-main__functions .c-main_functions__boxes--signUp {
   background-color: #091e28;
 }
 
+@media only screen and (min-width: 1200px) {
+  .o-main .o-main__functions .c-main_functions__boxes--signUp {
+    float: left;
+    width: 65%;
+    height: 280px;
+  }
+}
+
 .o-main .o-main__functions .c-main_functions__boxes--pictures {
   background-color: #73933c;
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-main .o-main__functions .c-main_functions__boxes--pictures {
+    float: left;
+    width: 35%;
+    height: 280px;
+  }
 }

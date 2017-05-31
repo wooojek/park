@@ -5,6 +5,10 @@ $clientsColor: #37461d;
 $signUpColor: #091e28;
 $picturesColor: #73933c;
 
+$mobile: "only screen and (max-width: 499px)";
+$tablet-up: "only screen and (min-width: 768px)";
+$desktop: "only screen and (min-width: 1200px)";
+
 * {
     margin: 0;
     padding: 0;
@@ -31,27 +35,64 @@ body {
         height: 130px;
         width: 100%;
         background-color: $logoBackgroundColor;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
 
         .c-header__title__text {
             color: $logoColor;
             font-size: 35px;
             font-weight: bold;
         }
-    }
 
-    .o-header__buttons {
-        display: none;
+        .o-header__title__buttons {
+            display: none;
+            @media #{$tablet-up} {
+                display: flex;
+                align-items: center;
+                height: 38px;
+                position: absolute;
+                right: 80px;
+            }
+
+            .c-header__title__buttons__searchButton {
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+                margin-right: 20px;
+            }
+
+            .c-header__title__buttons_burgerButton {
+                display: inline-block;
+                width: 40px;
+                height: 22px;
+                margin-left: 20px;
+            }
+        }
     }
 
     .o-header__generalView {
         margin: 0 60px;
         color: white;
+        @media #{$tablet-up} {
+            margin: 0 90px;
+        }
+        @media #{$desktop} {
+            width: 70%;
+            margin: 0 auto;
+        }
 
         .o-header__generalView__text {
             width: 40%;
             float: left;
-            margin-top: 80px;
+            margin-top: 140px;
+            @media #{$mobile} {
+                width: 100%;
+            }
+            @media #{$tablet-up} {
+                width: 48%;
+            }
 
             .c-header__generalView__text__title {
                 font-size: 35px;
@@ -69,6 +110,17 @@ body {
             width: 60%;
             padding-top: 150px;
             float: right;
+            @media #{$mobile} {
+                display: none;
+            }
+            @media #{$tablet-up} {
+                width: 52%;
+                max-width: 390px;
+            }
+            @media #{$desktop} {
+                width: 52%;
+                max-width: 480px;
+            }
         }
     }
 }
@@ -77,8 +129,19 @@ body {
     margin: 0 60px;
     margin-bottom: 70px;
     font-weight: 300;
+    @media #{$tablet-up} {
+        margin: 0 90px;
+        margin-bottom: 110px;
+    }
+    @media #{$desktop} {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 110px;
+    }
 
     .o-main__productOverview {
+        width: 100%;
+        margin-bottom: 50px;
 
         .c-main__productOverview__title {
             margin-top: 100px;
@@ -87,21 +150,36 @@ body {
         }
 
         .o-main__productOverview__description {
+            width: 100%;
             
             .c-main__productOverview__description__paragraph {
                 font-weight: 300;
                 text-align: left;
-                padding-bottom: 30px; 
+                padding-bottom: 30px;
+                @media #{$desktop} {
+                    width: 45%;
+                    padding: 15px 0;
+                    display: inline-block;
+                } 
             }
+            @media #{$desktop} {
+                .c-main__productOverview__description__paragraph:nth-child(2n) {
+                    float: right;
+                }
+            } 
         }
     }
 
     .o-main__functions {
 
+        @media #{$desktop} {
+            height: 560px;
+        }
+
         .o-main__functions__boxes {
             color: white;
-            height: 280px;
             padding: 45px 40px;
+            position: relative;
 
             .c-main__functions__boxes__title {
                 font-weight: 300;
@@ -109,29 +187,52 @@ body {
             }
 
             .c-main__functions__boxes__paragraph {
-                margin-bottom: 15px;
+                margin-bottom: 25px;
             }
 
             .c-main__functions__boxes__link {
                 color: white;
                 font-weight: 700;
+                position: absolute;
+                bottom: 45px;
+                
             }
         }
 
         .c-main_functions__boxes--build {
             background-color: $buildColor;
+            @media #{$desktop} {
+                float: left;
+                width: 65%;
+                height: 280px;
+            }
         }
         
         .c-main_functions__boxes--clients {
             background-color: $clientsColor;
+            @media #{$desktop} {
+                float: left;
+                width: 35%;
+                height: 280px;
+            }
         }
         
         .c-main_functions__boxes--signUp {
             background-color: $signUpColor;
+            @media #{$desktop} {
+                float: left;
+                width: 65%;
+                height: 280px;
+            }
         }
         
         .c-main_functions__boxes--pictures {
             background-color: $picturesColor;
+            @media #{$desktop} {
+                float: left;
+                width: 35%;
+                height: 280px;
+            }
         }
     }
 }
