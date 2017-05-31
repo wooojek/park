@@ -4,6 +4,8 @@ $buildColor: #43463e;
 $clientsColor: #37461d;
 $signUpColor: #091e28;
 $picturesColor: #73933c;
+$dropdownColor: #758160;
+$dropdownColorHover: #91a077;
 
 $mobile: "only screen and (max-width: 499px)";
 $tablet-up: "only screen and (min-width: 768px)";
@@ -14,6 +16,7 @@ $desktop: "only screen and (min-width: 1200px)";
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    list-style-type: none;
 }
 
 h1, h2, h3 {
@@ -23,6 +26,29 @@ h1, h2, h3 {
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
+.fade-in {
+	-webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .o-header {
     width: 100%;
@@ -56,18 +82,82 @@ body {
                 right: 80px;
             }
 
-            .c-header__title__buttons__searchButton {
-                display: inline-block;
-                width: 38px;
-                height: 38px;
-                margin-right: 20px;
+            .o-header__title__buttons__searchButton {
+                position: relative;
+
+                .c-header__title__buttons__searchButton {
+                    display: inline-block;
+                    width: 38px;
+                    height: 38px;
+                    margin-right: 20px;
+
+                }
+
             }
 
-            .c-header__title__buttons__burgerButton {
-                display: inline-block;
-                width: 40px;
-                height: 22px;
-                margin-left: 20px;
+            .o-header__title__buttons__burgerButton {
+                position: relative;
+
+                .c-header__title__buttons__burgerButton {
+                    display: inline-block;
+                    width: 40px;
+                    height: 22px;
+                    margin-left: 20px;
+                    position: relative;
+                }                
+            }
+        }
+
+        .c-header__title__buttons__burgerButton__dropdown {
+            display: none;
+            width: 100vw;
+            height: 50px;
+            background-color: $dropdownColor;
+            position: absolute;
+            z-index: 10;
+            top: 130px;
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+                height: 50px;
+
+                li {
+                    width: 20%;
+                    text-align: center;
+                    line-height: 50px;
+
+                    a {
+                        display: block;
+                        color: white;
+                    }
+                }
+
+                li:hover {
+                    opacity: 0.5;
+                    background-color: $dropdownColorHover;
+                }
+            }
+        }
+
+        .c-header__title__buttons__searchButton__dropdown {
+            display: none;
+            width: 100vw;
+            height: 50px;
+            background-color: $dropdownColor;
+            position: absolute;
+            top: 130px;
+            z-index: 10;
+            text-align: center;
+
+            input {
+                height: 30px;
+                width: 300px;
+                border: none;
+                margin-top: 10px;
+                border-radius: 5px;
+                outline: none;
+                padding: 0 15px; 
             }
         }
     }
@@ -203,7 +293,7 @@ body {
             background-color: $buildColor;
             @media #{$desktop} {
                 float: left;
-                width: 65%;
+                width: 60%;
                 height: 280px;
             }
         }
@@ -212,7 +302,7 @@ body {
             background-color: $clientsColor;
             @media #{$desktop} {
                 float: left;
-                width: 35%;
+                width: 40%;
                 height: 280px;
             }
         }
@@ -221,7 +311,7 @@ body {
             background-color: $signUpColor;
             @media #{$desktop} {
                 float: left;
-                width: 65%;
+                width: 60%;
                 height: 280px;
             }
         }
@@ -230,7 +320,7 @@ body {
             background-color: $picturesColor;
             @media #{$desktop} {
                 float: left;
-                width: 35%;
+                width: 40%;
                 height: 280px;
             }
         }
